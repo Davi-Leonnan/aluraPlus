@@ -162,7 +162,9 @@ afasta o conteúdo da borda e não um elemento do outro.  */
 
 .rodape__logo {
 
-    margin: 5em 0 2em 42em;
+    display: block; /* Permite o elemento centralizar com margin auto */
+    margin: 0 auto; /* Centraliza horizontalmente a imagem no rodapé */
+    max-width: 100%; /* Garante responsividade em telas menores */
 
 }
 
