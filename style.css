@@ -1,0 +1,206 @@
+/* root: Caixa de código utilizada para armazenar váriaveis que irão ser utilizadas em certas 
+propriedades do CSS. */
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #040814;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c94ff; 
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+/* "*": Define a margem e posição dos textos presentes na página web.*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Adicionando imagem de fundo */
+
+.principal {
+    background-image: url("imgs/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Permite usar pseudo-elemento para o efeito de transição transparente */
+}
+
+/* Efeito transparente da imagem de fundo */
+
+.principal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(4, 8, 20, 0) 60%, var(--cor-de-fundo) 100%);
+    /* Gradiente transparente no final da seção para suavizar a transição entre seções */
+}
+
+/* "grid": Separa os elementos na página web por blocos de espaço. */
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+/* "text-decoration: none; (Retira o sublinhado presente no texo do link)
+" */
+
+.container__button {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+
+}
+
+.secondary__button {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+    margin-top: 10px;
+}
+
+.container__title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* O sistema de "margin" funciona igual a um relógio no sentido horário. (Da direita pra esquerda) */
+
+/*  Margins realmente criam espaço ao redor do elemento e paddings criam dentro dele, ou seja, o padding 
+afasta o conteúdo da borda e não um elemento do outro.  */
+
+.container__image {
+    margin: 1em 0 2em 0;
+}
+
+.container__box {
+    margin: 0 6em;
+}
+
+.secondary__image {
+    width: 65%;
+    margin: 0 6em;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 6em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.25em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secondary__button {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+/* "list-style-type: none;": Remove os pontos dos itens de uma lista. */
+
+.dispositivos__lista {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 6em 0 18em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    
+    font-size: 48px;
+    color: var(--branco-principal);
+
+}
+
+.lista__itens {
+
+    font-size: 32px;
+    color: var(--branco-principal);
+
+}
+
+.rodape__logo {
+
+    margin: 5em 0 2em 42em;
+
+}
+
+.rodape__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    
+    
+    /* Adicionando espaçamento horizontal entre os itens da lista para melhorar a organização visual */
+    gap: 10px;
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 12px;
+    text-align: center;
+    margin: 1em 0 0 0;
+}
+
+/* Quando passa o mouse sobre os links */
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+/* Quando pressiona o mouse sobre os links (Sem finalizar a ação de "click") */
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__button:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.container__button:active {
+    color: rgb(235, 25, 70);
+}
