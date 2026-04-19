@@ -206,3 +206,305 @@ afasta o conteúdo da borda e não um elemento do outro.  */
 .container__button:active {
     color: rgb(235, 25, 70);
 }
+
+/* ========== RESPONSIVIDADE PARA DIFERENTES DISPOSITIVOS ========== */
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    /* Layout de coluna única para melhor visualização */
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100vh; /* Garante altura mínima para evitar sobreposição */
+    }
+
+    /* Aumenta espaçamento interno para melhor visualização */
+    .container__box {
+        margin: 2em 1em; /* Adiciona margem vertical */
+        padding: 1em 0; /* Adiciona padding vertical */
+    }
+
+    .secundario {
+        margin: 2em 1em; /* Aumenta espaçamento vertical */
+        padding: 2em 0; /* Adiciona padding para evitar sobreposição */
+    }
+
+    /* Reduz tamanho de fontes para telas pequenas */
+    .container__title {
+        font-size: 20px;
+        margin-bottom: 1em; /* Adiciona espaço abaixo do título */
+    }
+
+    .descricao__titulo {
+        font-size: 28px;
+        margin-bottom: 0.75em; /* Aumenta espaço abaixo do título */
+    }
+
+    .dispositivos__titulo {
+        font-size: 28px;
+        margin-bottom: 1.5em; /* Adiciona espaço abaixo do título */
+    }
+
+    /* Ajusta largura das imagens secundárias */
+    .secondary__image {
+        width: 100%;
+        margin: 1.5em 0; /* Aumenta espaçamento vertical */
+        display: block; /* Garante que a imagem seja um bloco */
+    }
+
+    /* Ajusta espaçamento da lista de dispositivos */
+    .dispositivos__lista {
+        flex-direction: column;
+        margin: 3em 0 8em 0; /* Aumenta espaço vertical */
+        gap: 2.5em; /* Aumenta espaço entre itens */
+        padding: 2em 0; /* Adiciona padding vertical */
+    }
+
+    /* Ajusta espaçamento do rodapé em telas pequenas */
+    .rodape__lista {
+        flex-wrap: wrap;
+        gap: 20px; /* Aumenta espaço entre itens */
+        padding: 2em 0; /* Adiciona padding vertical */
+    }
+
+    .rodape__logo {
+        width: 120px;
+        margin: 3em auto 2em auto; /* Aumenta espaço acima e abaixo */
+        padding: 1em 0; /* Adiciona padding vertical */
+    }
+
+    .lista__itens {
+        font-size: 18px;
+        margin-top: 0.5em; /* Adiciona espaço acima do texto */
+    }
+
+    .container__descricao {
+        padding: 2em 1em; /* Aumenta padding interno */
+    }
+
+    br {
+        display: none; /* Remove <br> tags em dispositivos móveis */
+    }
+}
+
+/* Tablets pequenos (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Layout responsivo para tablets */
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100vh; /* Garante altura mínima */
+    }
+
+    .container__box {
+        margin: 2em 2em; /* Adiciona margem vertical */
+        padding: 1.5em 0; /* Adiciona padding vertical */
+    }
+
+    .secundario {
+        margin: 2em 2em; /* Adiciona margem vertical */
+        padding: 2.5em 0; /* Adiciona padding vertical */
+    }
+
+    .container__title {
+        font-size: 24px;
+        margin-bottom: 1em;
+    }
+
+    .descricao__titulo {
+        font-size: 36px;
+        margin-bottom: 1em;
+    }
+
+    .dispositivos__titulo {
+        font-size: 36px;
+        margin-bottom: 1.5em;
+    }
+
+    .secondary__image {
+        width: 100%;
+        margin: 1.5em 0; /* Aumenta espaçamento vertical */
+        display: block;
+    }
+
+    .dispositivos__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 3em 0 10em 0; /* Aumenta espaço vertical */
+        gap: 2em; /* Aumenta espaço entre itens */
+        padding: 2em 0;
+    }
+
+    .rodape__lista {
+        flex-wrap: wrap;
+        gap: 20px; /* Aumenta espaço entre itens */
+        padding: 2em 0;
+    }
+
+    .rodape__logo {
+        width: 150px;
+        margin: 3em auto 2em auto; /* Aumenta espaço acima e abaixo */
+        padding: 1em 0;
+    }
+
+    .container__descricao {
+        padding: 2em; /* Aumenta padding */
+    }
+
+    br {
+        display: none;
+    }
+}
+
+/* Tablets (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajusta grid para tablets maiores */
+    .container {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container__box {
+        margin: 2em 3em; /* Adiciona margem vertical */
+        padding: 1em 0;
+    }
+
+    .secundario {
+        margin: 2em 3em; /* Adiciona margem vertical */
+        padding: 2em 0; /* Adiciona padding vertical */
+    }
+
+    .container__title {
+        font-size: 26px;
+    }
+
+    .descricao__titulo {
+        font-size: 40px;
+        margin-bottom: 1em;
+    }
+
+    .dispositivos__titulo {
+        font-size: 40px;
+        margin-bottom: 1.5em;
+    }
+
+    .secondary__image {
+        width: 80%;
+        margin: 1em 2em; /* Adiciona espaçamento vertical */
+        display: block;
+    }
+
+    .dispositivos__lista {
+        margin: 5em 0 15em 0; /* Aumenta espaço vertical */
+        gap: 2.5em;
+        padding: 2em 0;
+    }
+
+    .rodape__lista {
+        gap: 15px;
+        padding: 2em 0;
+    }
+
+    .rodape__logo {
+        width: 170px;
+        margin: 3em auto 2em auto; /* Adiciona margem vertical */
+        padding: 1em 0;
+    }
+
+    .container__descricao {
+        padding: 2em;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+/* Desktop (1025px a 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* Mantém o layout original com ajustes menores */
+    .container {
+        grid-template-columns: 50% 50%;
+        min-height: 100vh;
+    }
+
+    .container__box {
+        margin: 1em 4em; /* Adiciona margem vertical pequena */
+    }
+
+    .secundario {
+        margin: 1em 4em; /* Adiciona margem vertical pequena */
+    }
+
+    .secondary__image {
+        width: 65%;
+        margin: 0 4em;
+    }
+
+    .rodape__logo {
+        width: 200px;
+        margin: 2em auto; /* Adiciona margem vertical */
+    }
+
+    .container__descricao {
+        padding: 2em;
+    }
+}
+
+/* Telas muito grandes / TVs (acima de 1440px) */
+@media (min-width: 1441px) {
+    /* Aumenta espaçamentos para aproveitar telas grandes */
+    .container {
+        grid-template-columns: 50% 50%;
+        min-height: 100vh;
+    }
+
+    .container__box {
+        margin: 2em 8em; /* Adiciona margem vertical */
+    }
+
+    .secundario {
+        margin: 2em 8em; /* Adiciona margem vertical */
+    }
+
+    .container__title {
+        font-size: 32px;
+    }
+
+    .descricao__titulo {
+        font-size: 56px;
+    }
+
+    .dispositivos__titulo {
+        font-size: 56px;
+    }
+
+    .secondary__image {
+        width: 65%;
+        margin: 1em 8em; /* Adiciona margem vertical */
+    }
+
+    .dispositivos__lista {
+        margin: 8em 0 20em 0;
+        gap: 4em;
+        padding: 2em 0;
+    }
+
+    .rodape__logo {
+        width: 250px;
+        margin: 3em auto 2em auto; /* Adiciona margem vertical */
+    }
+
+    .rodape__lista {
+        padding: 2em 0;
+    }
+
+    .lista__itens {
+        font-size: 40px;
+    }
+
+    .container__descricao {
+        padding: 2em;
+    }
+}
